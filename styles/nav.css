@@ -1,0 +1,394 @@
+/* Base styles */
+* {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	padding-top: 100px;
+}
+
+/* Navbar styles */
+.navbar {
+	background: linear-gradient(135deg, #3d45a1, #283593);
+	padding: 0.8rem 1rem;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	height: 150px;
+	left: 0;
+	right: 0;
+}
+
+.nav-container {
+	top: 3%;
+	margin: 10px;
+	display: flex;
+}
+
+/* Logo styles */
+.logo {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.logo img {
+	height: 100px;
+	width: auto;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+	animation: float 3s ease-in-out infinite;
+}
+
+.logo img:hover {
+	transform: scale(1.05);
+}
+
+.logo h1 {
+	color: #ffffff;
+	font-size: 2.2rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+/* Navigation links */
+.nav-links {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	margin-left: 500px;
+}
+
+.nav-links ul {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+	background: rgba(255, 255, 255, 0.1);
+	transform: translateY(-2px);
+}
+
+.nav-links a.active {
+	background: #c62828;
+	color: white;
+}
+
+.nav-container .nav-controls {
+	top: 4.5%;
+	position: fixed;
+	left: 90%;
+}
+
+/* Animation for logo */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-7px);
+	}
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.navbar {
+		padding: 1rem;
+	}
+
+	.nav-container {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.nav-links ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.logo {
+		margin-bottom: 1rem;
+	}
+
+	.logo img {
+		height: 40px;
+	}
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+	.navbar {
+		background: linear-gradient(135deg, #1a327a, #575da1);
+	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background-color: hsl(0, 0%, 80%);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: hsl(0, 0%, 50%);
+	border-radius: 4px;
+}
+/* Footer Styles */
+footer {
+	background: linear-gradient(135deg, #1a237e, #283593);
+	padding: 2.5rem 0 1rem;
+	border-radius: 0 10px 0 0;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-section h3 {
+	color: #fff;
+	margin-bottom: 1.5rem;
+	font-size: 1.2rem;
+	position: relative;
+	padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 120px;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-section p,
+.footer-section a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	margin: 0.5rem 0;
+	transition: 0.3s ease;
+	display: block;
+}
+
+.footer-section a:hover {
+	color: #fff;
+	transform: translateX(5px);
+}
+
+.social-links {
+	display: flex;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.social-links a {
+	color: #fff;
+	font-size: 1.5rem;
+	transition: 0.3s;
+	background: rgba(255, 255, 255, 0.1);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-links a:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-5px);
+	color: #fff;
+}
+
+.footer-bottom {
+	text-align: center;
+	padding-top: 2rem;
+	margin-top: 2rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+	background-color: hsl(0, 0%, 10%);
+	color: #ffffff;
+}
+
+body.dark-mode a {
+	color: #95bdb6e2;
+}
+
+body.dark-mode h1 {
+	color: #ffffff;
+}
+
+body.dark-mode a.active {
+	background-color: #c62828;
+	color: #ffffff;
+}
+
+#darkModeToggle {
+	padding: 0.8rem;
+	border-radius: 50%;
+	background: transparent;
+	color: #ecf0f1;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: all 0.3s ease;
+	border: none;
+}
+
+#darkModeToggle:hover {
+	background-color: #dae;
+	transition: 0.5s ease-in-out;
+}
+body.dark-mode #darkModeToggle {
+	border-color: #ecf0f1;
+	color: #ecf0f1;
+}
+
+body.dark-mode #darkModeToggle:hover {
+	background-color: #e74c3c;
+	color: #ecf0f1;
+	border-color: #e74c3c;
+}
+
+/* Dark mode content styles */
+body.dark-mode .gallery {
+	background-color: #1a1a1a;
+}
+
+body.dark-mode footer {
+	background: linear-gradient(135deg, #1a237e, #283593);
+	border-top: 1px solid rgba(236, 240, 241, 0.27);
+}
+
+body.dark-mode .accordion-content {
+	background-color: hsl(0, 0%, 65%);
+}
+
+/* Calendar and News Components Dark Mode */
+body.dark-mode .container1,
+body.dark-mode .container2 {
+	background-color: hsl(224, 33%, 15%);
+}
+
+body.dark-mode .news-list,
+body.dark-mode .news-desc,
+body.dark-mode .news-form,
+body.dark-mode .calendar {
+	background: hsl(224, 33%, 20%);
+	color: #ffffff;
+}
+
+body.dark-mode .day {
+	background: hsl(224, 33%, 25%);
+	color: #ffffff;
+	border-color: hsl(224, 33%, 30%);
+}
+
+body.dark-mode .day:hover {
+	background: hsl(224, 33%, 35%);
+}
+
+body.dark-mode .today {
+	background: hsl(120, 50%, 25%);
+	border-color: hsl(120, 50%, 35%);
+}
+
+body.dark-mode #description,
+body.dark-mode .news-list li {
+	color: #a8c7fa;
+}
+
+body.dark-mode .news-desc h1,
+body.dark-mode .news-list h2,
+body.dark-mode .calendar h1,
+body.dark-mode .recent-news h1,
+body.dark-mode .container2 h1,
+body.dark-mode #monthYear {
+	color: #ffffff;
+}
+
+body.dark-mode form input[type="text"],
+body.dark-mode form textarea {
+	background: hsl(224, 33%, 25%);
+	border-color: hsl(224, 33%, 30%);
+	color: #ffffff;
+}
+
+body.dark-mode form input[type="text"]::placeholder,
+body.dark-mode form textarea::placeholder {
+	color: #a8c7fa;
+}
+
+/* Dark Mode Styles for About Page */
+body.dark-mode .about-us {
+	background-color: hsl(224, 33%, 15%);
+	color: #ffffff;
+}
+
+body.dark-mode .tab-button {
+	background: hsl(224, 33%, 25%);
+	color: #ffffff;
+}
+
+body.dark-mode .tab-button:hover {
+	background: hsl(224, 33%, 35%);
+}
+
+body.dark-mode .tab-button.active {
+	background: #c62828;
+	color: #ffffff;
+}
+
+body.dark-mode .tab-content {
+	background: hsl(224, 33%, 20%);
+	color: #ffffff;
+	border: 1px solid hsl(224, 33%, 30%);
+}
+
+body.dark-mode .tab-content h3 {
+	color: #80a9ff;
+}
+
+body.dark-mode .tab-content p {
+	color: #f0f0f0;
+}
+
+body.dark-mode .gallery-section h1 {
+	color: #c62828;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="icons/new.png" rel="icon" />
+        <link href="/styles/news.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="/styles/small.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <title>News Page</title>
+    </head>
+
+    <body id="news-body">
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.jpeg" alt="Kings College Budo Logo">
+                        </a>
+                    </div>
+
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="news.html">News & Events</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-controls">
+                        <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                            <span class="mode-icon">🌓</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container1">
+            <div class="notification hide" id="notification"></div>
+            <section id="news-section" class="recent-news">
+                <h1>News Section</h1>
+                <div class="news-container">
+                    <div class="news-list">
+                        <h2>Latest News</h2>
+                        <div class="search-filter">
+                            <input type="text" id="newsSearch" placeholder="Search news...">
+                            <select id="categoryFilter">
+                                <option value="all">All Categories</option>
+                                <option value="academic">Academic</option>
+                                <option value="sports">Sports</option>
+                                <option value="culture">Culture</option>
+                                <option value="events">Events</option>
+                            </select>
+                        </div>
+                        <ul id="news"></ul>
+                    </div>
+                    <div class="news-desc">
+                        <h1>News Description</h1>
+                        <img alt="news image" id="image_description" src="" />
+                        <p id="description">Click on a news heading to view</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container2">
+            <h1>Events</h1>
+            <section id="events-section" class="event-calendar">
+                <div class="calendar">
+                    <h1>Event calendar</h1>
+                    <button id="prevMonth">&leftarrow;</button>
+                    <h2 id="monthYear"></h2>
+                    <button id="nextMonth">&rightarrow;</button>
+                    <div class="days"></div>
+                </div>
+                <div id="dateModal">
+                    <button id="close">&times;</button>
+                    <h3 id="dateText"></h3>
+                    <p id="event"></p>
+                </div>
+                <div class="news-form">
+                    <form id="newForm">
+                        <input name="title" placeholder="News/Events Title" required type="text" />
+                        <div class="image-upload">
+                            <input accept="image/*" id="imageInput" name="image" type="file" />
+                            <label class="image-preview" for="imageInput">
+                                <img alt="Image Preview" id="preview" src="#" style="display: none" />
+                                <span>Click to upload image</span>
+                            </label>
+                        </div>
+                        <textarea cols="10" name="description" placeholder="Description" required rows="5"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal-overlay" id="modalOverlay" style="display: none;"></div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@kcbudo.ac.ug</p>
+                    <p>Phone: +256 762 391 115</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">School Portal</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 King's College Budo. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="scripts/newsList.js"></script>
+        <script src="scripts/news.js"></script>
+        <script src="scripts/calendar.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,348 @@
+/* Reset and base styles */
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: hsla(0, 0%, 80%);
+}
+
+main {
+	padding-top: 100px;
+}
+
+/* Main Content Styles */
+.container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 0 1.5rem;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+/* Accordion Styling */
+.accordion {
+	width: 80%;
+	max-width: 900px;
+	margin: 2rem auto;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-btn {
+	background: linear-gradient(135deg, #1a237e, #283593);
+	color: white;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	width: 100%;
+	border: none;
+	text-align: left;
+	font-size: 1.1rem;
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.accordion-btn:hover {
+	background: linear-gradient(135deg, #283593, #1a237e);
+}
+
+.accordion-btn::after {
+	content: "+";
+	font-size: 1.5rem;
+	transform: rotate(0deg);
+	transition: transform 0.3s ease;
+}
+
+.accordion-btn.active::after {
+	transform: rotate(45deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	background: white;
+}
+
+.accordion-content ul {
+	padding: 1.5rem;
+	list-style-type: none;
+	margin: 0;
+}
+
+.accordion-content li {
+	margin-bottom: 0.5rem;
+	padding-left: 1rem;
+	position: relative;
+	color: #333; /* Added for better visibility */
+}
+
+.accordion-content li::before {
+	content: "•";
+	position: absolute;
+	left: -0.5rem;
+	color: #1a237e;
+}
+
+/* Table Styling */
+table {
+	width: 90%;
+	max-width: 1000px;
+	margin: 2rem auto;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+	padding: 1rem;
+	text-align: left;
+	border: 1px solid #e0e0e0;
+}
+
+th {
+	background: linear-gradient(135deg, #1a237e, #283593);
+	color: white;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+	background-color: #f8f9fa83;
+}
+
+tr:hover {
+	background-color: #859aaf;
+	transition: 0.4s ease-in-out;
+}
+
+/* Contact Section Styling */
+#contact {
+	background: linear-gradient(135deg, #1a237e, #283593);
+	padding: 3rem 0;
+	color: white;
+	margin-top: 2rem;
+}
+
+.contact-container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	backdrop-filter: blur(10px);
+}
+
+#contact h2 {
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	color: white;
+}
+
+#contact p {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+#contact form {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.form-group {
+	margin-bottom: 1.2rem;
+}
+
+#contact input,
+#contact textarea {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-size: 0.9rem;
+	transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+	outline: none;
+	border-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.15);
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.submit-btn {
+	width: 100%;
+	padding: 0.8rem;
+	background: #c62828;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+	background: #d32f2f;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section Styling */
+.faq {
+	max-width: 900px;
+	margin: 3rem auto;
+	padding: 0 1.5rem;
+}
+
+.faq h2 {
+	text-align: center;
+	color: #1a237e;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+.faq-item {
+	background: white;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.faq-item summary {
+	padding: 1.2rem;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.1rem;
+	color: #1a237e;
+	list-style: none;
+	position: relative;
+	padding-right: 3rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq-item summary::after {
+	content: "+";
+	position: absolute;
+	right: 1.2rem;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.5rem;
+	color: #1a237e;
+	transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item p {
+	padding: 1rem 1.2rem;
+	margin: 0;
+	color: #555;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-item ul {
+	padding: 0 1.2rem 1.2rem 2.5rem;
+	margin: 0;
+	color: #555;
+}
+
+.faq-item li {
+	margin: 0.5rem 0;
+}
+
+/* Animation for opening/closing */
+.faq-item[open] {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.faq {
+		margin: 2rem auto;
+	}
+
+	.faq-item summary {
+		padding: 1rem;
+		font-size: 1rem;
+	}
+
+	.faq-item p,
+	.faq-item ul {
+		padding: 1rem;
+		margin-left: 20px;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.accordion,
+	table {
+		width: 95%;
+	}
+
+	th,
+	td {
+		padding: 0.8rem;
+		font-size: 0.9rem;
+	}
+
+	#contact input,
+	#contact textarea {
+		width: 90%;
+	}
+
+	#contact form {
+		max-width: 90%;
+		padding: 0 1rem;
+	}
+
+	.contact-container {
+		margin: 0 1rem;
+	}
+}
