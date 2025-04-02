@@ -134,6 +134,7 @@
 	}
 
 	.days {
+		margin-left: 4px;
 		grid-template-columns: repeat(7, 1fr);
 		gap: 3px;
 	}
