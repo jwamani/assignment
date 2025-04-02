@@ -106,13 +106,14 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 	.news-container {
 		flex-direction: column;
+		/* text-align: center; */
 	}
 
 	.news-list {
-		width: 90%;
+		width: 91%;
 		margin-bottom: 20px;
 	}
 
@@ -140,7 +141,7 @@
 	.day {
 		aspect-ratio: 1;
 		font-size: 0.8rem;
-		padding: 0.25rem;
+		padding: 0.2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -200,7 +201,12 @@
 		margin-top: 0.5rem;
 	}
 	#monthYear {
-		left: 10%;
-		font-size: 40px;
+		left: 25%;
+		font-size: 30px;
 	}
+
+	#nextMonth, #prevMonth {
+		padding: 0 3px;
+	}
+
 }
