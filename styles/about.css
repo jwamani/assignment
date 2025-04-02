@@ -99,23 +99,4 @@ p {
 		flex-direction: column;
 		gap: 10px;
 	}
-
-	.links {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: #1a237e;
-		padding: 1rem;
-	}
-
-	.links.active {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.menu-toggle {
-		display: block;
-	}
 }

@@ -25,19 +25,6 @@
 		margin-bottom: 1rem;
 	}
 
-	/* Navigation Styles */
-	.navbar {
-		background: #1a237e;
-		backdrop-filter: blur(10px);
-		padding: 1rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 2rem;
-		border-radius: 0 0 15px 15px;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	}
-
 	/* News Section Styles */
 	.news-container {
 		display: flex;
@@ -86,43 +73,6 @@
 		padding: 20px;
 	}
 
-	/* Footer Styles */
-	footer {
-		background: #1a237e;
-		backdrop-filter: blur(10px);
-		padding: 3rem 0 1rem;
-		margin-top: 0;
-		border-radius: 15px 15px 0 0;
-		box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-	}
-
-	.footer-section h3 {
-		color: #ffffff;
-	}
-
-	.footer-section a {
-		color: #e0e0e0;
-		transition: color 0.3s ease;
-	}
-
-	.footer-section a:hover {
-		color: #ffffff;
-	}
-
-	.social-links a {
-		background: rgba(255, 255, 255, 0.1);
-		color: #ffffff;
-	}
-
-	.social-links a:hover {
-		background: rgba(255, 255, 255, 0.2);
-		transform: translateY(-2px);
-	}
-
-	.footer-bottom {
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-		color: #e0e0e0;
-	}
 
 	/* Utility Classes */
 	.hide {
@@ -174,52 +124,7 @@
 		max-width: 60vw;
 	}
 
-	.footer-content {
-		grid-template-columns: 1fr;
-		text-align: center;
-	}
-
-	.navbar {
-		flex-direction: column;
-		gap: 1rem;
-		position: relative;
-		padding: 0.8rem 1rem;
-	}
-
-	.nav-links {
-		display: none;
-		width: 100%;
-		padding: 1rem 0;
-		text-align: center;
-	}
-
-	.nav-links.active {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.nav-toggle {
-		display: block;
-		position: absolute;
-		right: 1rem;
-		top: 1rem;
-		cursor: pointer;
-		padding: 0.5rem;
-		z-index: 100;
-	}
-
-	.nav-link {
-		padding: 0.5rem 1rem;
-		width: 100%;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.nav-link:last-child {
-		border-bottom: none;
-	}
-
-	/* Calendar Fixes */
+	
 	.calendar {
 		max-width: 100%;
 		height: auto;
@@ -246,7 +151,7 @@
 		padding: 0.25rem;
 	}
 
-	/* Form Fixes */
+	
 	.news-form {
 		max-width: 90%;
 		height: auto;
@@ -271,7 +176,6 @@
 		padding: 0.5rem;
 	}
 
-	/* Event Calendar Layout Fix */
 	.event-calendar {
 		flex-direction: column;
 	}
@@ -281,7 +185,6 @@
 		max-width: 100%;
 	}
 
-	/* Calendar Modal Fixes */
 	#dateModal {
 		width: 90%;
 		max-width: 350px;
@@ -299,305 +202,5 @@
 	#monthYear {
 		left: 10%;
 		font-size: 40px;
-	}
-
-	/* Footer Responsive Fixes */
-	footer {
-		padding: 2rem 1rem 1rem;
-	}
-
-	.footer-content {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	.footer-section {
-		text-align: center;
-		padding: 0 1rem;
-	}
-
-	.footer-section h3 {
-		font-size: 1.2rem;
-		margin-bottom: 1rem;
-	}
-
-	.footer-section h3::after {
-		left: 50%;
-		transform: translateX(-50%);
-		width: 60px;
-	}
-
-	.footer-section p,
-	.footer-section a {
-		font-size: 0.9rem;
-		margin: 0.5rem 0;
-	}
-
-	.social-links {
-		justify-content: center;
-		gap: 1rem;
-		margin-top: 1rem;
-	}
-
-	.social-links a {
-		width: 35px;
-		height: 35px;
-		font-size: 1.2rem;
-	}
-
-	.footer-bottom {
-		margin-top: 1.5rem;
-		padding-top: 1.5rem;
-		font-size: 0.8rem;
-	}
-}
-
-@media (max-width: 480px) {
-	#dateModal {
-		width: 85%;
-		padding: 1rem;
-	}
-}
-
-/* Extra Small Devices */
-@media (max-width: 480px) {
-	.day {
-		font-size: 0.7rem;
-	}
-
-	.dayName {
-		font-size: 0.7rem;
-	}
-
-	.calendar {
-		padding: 0.5rem;
-	}
-
-	#monthYear {
-		font-size: 1rem;
-	}
-
-	#prevMonth,
-	#nextMonth {
-		padding: 0.25rem 0.5rem;
-		font-size: 1rem;
-	}
-
-	.news-form form {
-		padding: 0.5rem;
-	}
-
-	/* Footer Extra Small Screen Fixes */
-	footer {
-		padding: 1.5rem 0.5rem 1rem;
-	}
-
-	.footer-section h3 {
-		font-size: 1.1rem;
-	}
-
-	.social-links a {
-		width: 30px;
-		height: 30px;
-		font-size: 1rem;
-	}
-
-	.footer-section p,
-	.footer-section a {
-		font-size: 0.85rem;
-	}
-
-	.footer-bottom {
-		font-size: 0.75rem;
-	}
-}
-
-/* Landscape Mode Fixes */
-@media (max-height: 500px) and (orientation: landscape) {
-	.event-calendar {
-		flex-direction: row;
-		gap: 1rem;
-	}
-
-	.calendar,
-	.news-form {
-		height: 80vh;
-	}
-
-	.days {
-		gap: 2px;
-	}
-
-	.day {
-		aspect-ratio: 1.2;
-	}
-
-	/* Footer Landscape Fixes */
-	footer {
-		padding: 1rem;
-	}
-
-	.footer-content {
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
-	}
-
-	.footer-section h3 {
-		font-size: 1rem;
-	}
-}
-
-/* Navbar Responsive Styles */
-@media (max-width: 768px) {
-	.navbar {
-		flex-direction: column;
-		padding: 0.5rem;
-		position: fixed;
-		width: 100%;
-		top: 0;
-		z-index: 1000;
-	}
-
-	.nav-container {
-		width: 100%;
-		padding: 0;
-	}
-
-	.logo {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0.5rem 1rem;
-	}
-
-	.logo img {
-		height: 40px;
-	}
-
-	/* Hamburger Menu */
-	.nav-toggle {
-		display: block;
-		background: transparent;
-		border: none;
-		color: white;
-		font-size: 1.5rem;
-		cursor: pointer;
-		transition: transform 0.3s ease;
-	}
-
-	.nav-toggle.active {
-		transform: rotate(90deg);
-	}
-
-	.nav-links {
-		display: none;
-		width: 100%;
-		background: #283593;
-		border-radius: 0 0 8px 8px;
-	}
-
-	.nav-links.active {
-		display: flex;
-		flex-direction: column;
-		padding: 1rem 0;
-	}
-
-	.nav-links ul {
-		flex-direction: column;
-		width: 100%;
-	}
-
-	.nav-links li {
-		width: 100%;
-		text-align: center;
-	}
-
-	.nav-links a {
-		width: 100%;
-		padding: 0.8rem;
-		display: block;
-	}
-}
-
-/* Footer Responsive Styles */
-@media (max-width: 768px) {
-	footer {
-		padding: 2rem 1rem;
-	}
-
-	.footer-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		text-align: center;
-	}
-
-	.footer-section {
-		padding: 0;
-	}
-
-	.footer-links {
-		justify-content: center;
-	}
-
-	.social-links {
-		justify-content: center;
-		gap: 1rem;
-	}
-}
-
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-	.navbar {
-		padding: 0.3rem;
-	}
-
-	.logo img {
-		height: 35px;
-	}
-
-	.nav-links a {
-		font-size: 0.9rem;
-		padding: 0.6rem;
-	}
-
-	footer {
-		padding: 1.5rem 0.5rem;
-	}
-
-	.footer-section h3 {
-		font-size: 1.1rem;
-		margin-bottom: 0.8rem;
-	}
-
-	.social-links a {
-		width: 35px;
-		height: 35px;
-		font-size: 1rem;
-	}
-}
-
-/* Landscape Mode */
-@media (max-height: 500px) and (orientation: landscape) {
-	.navbar {
-		position: relative;
-	}
-
-	.nav-links.active {
-		position: absolute;
-		top: 100%;
-		max-height: 80vh;
-		overflow-y: auto;
-	}
-
-	footer {
-		padding: 1rem;
-	}
-
-	.footer-content {
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
-		text-align: left;
 	}
 }
