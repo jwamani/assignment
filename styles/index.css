@@ -172,3 +172,18 @@ body.dark-mode .btn-primary:hover {
 body.dark-mode #slide {
 	filter: brightness(0.8);
 }
+.welcome {
+	width: 60vw;
+	text-align: center;
+	margin: auto;
+	color: white;
+	background-color: royalblue;
+	padding: 5px;
+	box-shadow: 2px 2px 4px rgba(101, 129, 125, 0.173), -2px -2px 4px rgba(101, 129, 125, 0.173);
+	margin-bottom: 30px;
+}
+
+body.dark-mode .welcome {
+	background-color: hsl(225, 73%, 27%);
+	color: hsl(0, 5%, 70%);
+}
