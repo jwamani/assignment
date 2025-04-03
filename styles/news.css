@@ -102,8 +102,8 @@ h2 {
 	border-bottom: none;
 }
 .active {
-	background: rgba(198, 163, 158, 0.3);
-	color: #488288;
+	background: rgb(233, 228, 228);
+	color: #141616;
 }
 /* News Description */
 .news-desc {

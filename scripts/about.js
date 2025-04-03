@@ -16,11 +16,13 @@ tabButtons.forEach(button => {
 });
 
 
-const navLinks = document.getElementById('nav-links');
+const body = document.body;
 
-const aboutBody = document.getElementById('about-body');
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
 
 darkModeToggle.addEventListener('click', () => {
-    aboutBody.classList.toggle('dark-mode')
-    console.log('toggled about')
-})
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+});

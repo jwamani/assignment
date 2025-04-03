@@ -124,7 +124,15 @@ function showNotification(message) {
         notification.classList.add('hide');
     }, 3000);
 }
-const newsBody = document.getElementById('news-body')
-darkModeToggle.addEventListener('click', function () {
-    newsBody.classList.toggle('dark-mode')
-})
+// const newsBody = document.getElementById('news-body')
+// const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+});

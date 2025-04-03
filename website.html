@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Kings College Budo</title>
+        <link rel="icon" href="icons/new.png">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/websitestyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="scripts/websitejavascript.js" defer></script>
+    </head>
+
+    <body id="contact-body">
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.jpeg" alt="Kings College Budo Logo">
+                        </a>
+                    </div>
+
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="news.html">News & Events</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="website.html" class="active">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-controls">
+                        <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                            <span class="mode-icon">🌓</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="maindiv">
+                <div class="div1">
+                    <div id="ph">
+                        <img src="contact us/pics/phone.jpg" alt="phone number" id="tel">
+                        <strong>Phone Number</strong>
+                        <p>+256 705 357993</p>
+                    </div>
+                    <div id="em">
+                        <img src="contact us/pics/mail.jpg" alt="email" id="mail">
+                        <strong>E-mail</strong>
+                        <p>info@kcbudo.ac.ug</p>
+                    </div>
+                    <div id="lo">
+                        <img src="contact us/pics/location.jpg" alt="location" id="location">
+                        <strong>Location</strong>
+                        <p>7F5P+9X8, Kampala</p>
+                        <small>Tap for more info</small>
+                    </div>
+                    <div id="wo">
+                        <img src="contact us/pics/time.jpg" alt="work hours" id="hours">
+                        <strong>Work hours</strong>
+                        <p>Monday to Friday</p>
+                        <p>9:00am to 5:00pm</p>
+                    </div>
+                </div>
+                <div class="div2 container">
+                    <details id="detailsSection">
+                        <summary>Tap Here To Contact Us</summary>
+                        <form class="form-grid" method="post">
+                            <input type="text" name="fname" id="fname" placeholder="First Name" maxlength="15" required>
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" maxlength="15" required>
+                            <input type="tel" name="mobile" id="mobile" placeholder="Mobile No."
+                                pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+                            <input type="email" name="email" id="email" placeholder="E-mail" required>
+                            <textarea name="message" id="message" placeholder="Enter Message"
+                                maxlength="150"></textarea>
+                        </form>
+                        <button onclick="sendEmail()" id="submit">Submit</button>
+                    </details>
+                    <div class="iframe-container" id="iframeContainer">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.777738766959!2d32.484871373103424!3d0.2584198641155182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177da27933c679b7%3A0xd97fe43c0e3ac1d0!2sKings%20College%20Budo!5e0!3m2!1sen!2sug!4v1743208320749!5m2!1sen!2sug"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal" id="emailModal">
+                <p>Your message has been sent!</p>
+                <button class="close-btn" onclick="closeModal()">OK</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@kcbudo.ac.ug</p>
+                    <p>Phone: +256 762 391 115</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">Events</a></li>
+                        <li><a href="academics.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/kingscollegebudo/?locale=pt_PT"><i
+                                class="fab fa-facebook"></i></a>
+                        <a
+                            href="https://twitter.com/TheBudoLeague?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/explore/locations/270042705/kings-college-budo/"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 King's College Budo. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+
+</html>

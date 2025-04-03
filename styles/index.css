@@ -121,7 +121,7 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
 	body {
-		padding-top: 100px;
+		padding-top: 140px;
 	}
 	#slide {
 		width: 100%;
@@ -129,6 +129,9 @@ h1 {
 	.featured-links {
 		flex-direction: column;
 		gap: 30px;
+	}
+	.navbar {
+		padding-bottom: 310px;
 	}
 }
 

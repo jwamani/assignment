@@ -20,7 +20,13 @@ function changeSlide() {
 
 // Start the slideshow when the page loads
 window.onload = changeSlide;
-const indexBody = document.getElementById('index-body');
-darkModeToggle.addEventListener('click', function () {
-    indexBody.classList.toggle('dark-mode')
-})
+const body = document.body;
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+});

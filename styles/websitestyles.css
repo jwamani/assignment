@@ -1,0 +1,289 @@
+/* Base styles */
+body {
+	background-color: rgb(205, 209, 209);
+	color: #555555;
+	font-family: "Poppins", sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	padding-top: 100px;
+}
+
+/* Main layout */
+.maindiv {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/* Contact info section */
+.div1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 2rem;
+	background: linear-gradient(135deg, #ffffff, #f0f0f0);
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.div1 > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1.5rem;
+	background: white;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+}
+
+.div1 > div:hover {
+	transform: translateY(-5px);
+}
+
+.div1 img {
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+	margin-bottom: 1rem;
+}
+
+.div1 strong {
+	font-size: 1.2rem;
+	color: #003366;
+	margin: 0.5rem 0;
+}
+
+.div1 p,
+strong,
+small {
+	text-align: center;
+	margin: auto;
+}
+
+.div1 div {
+	box-sizing: border-box;
+	place-items: center;
+}
+
+/* Contact form section */
+.div2 {
+	background: linear-gradient(135deg, #ffffff, #f0f0f0);
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	padding: 1rem;
+	background: white;
+	border-radius: 8px;
+	max-width: 500px;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.form-grid input,
+.form-grid textarea {
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-family: inherit;
+}
+
+.form-grid textarea {
+	grid-column: 1 / -1;
+	resize: vertical;
+}
+
+#fname,
+#lname,
+#mobile,
+#email {
+	width: 100%;
+	height: 20px;
+}
+
+textarea {
+	width: 100%;
+	height: 70px;
+	resize: none;
+}
+
+#submit {
+	background: #003366;
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 1rem;
+}
+
+#submit:hover {
+	background: #004c99;
+}
+
+/* Map container */
+.iframe-container {
+	margin-top: 2rem;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	flex: 1;
+	transition: height 0.3s ease-in-out;
+}
+
+iframe {
+	width: 100%;
+	height: 400px;
+	border: none;
+}
+
+details {
+	background: #003366;
+	color: white;
+	padding: 1rem;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+}
+
+summary {
+	cursor: pointer;
+	font-weight: 500;
+	padding: 0.5rem;
+}
+
+/* Modal styles */
+.modal-overlay {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 1000;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	z-index: 1001;
+	display: none;
+	text-align: center;
+}
+
+.close-btn {
+	background: #003366;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+	background-color: #1a1a1a;
+	color: #ffffff;
+}
+
+body.dark-mode .div1,
+body.dark-mode .div2 {
+	background: linear-gradient(135deg, #2a2a2a, #333333);
+}
+
+body.dark-mode .div1 > div {
+	background: #2a2a2a;
+}
+
+body.dark-mode .div1 strong {
+	color: #80a9ff;
+}
+
+body.dark-mode .form-grid {
+	background: #2a2a2a;
+}
+
+body.dark-mode .form-grid input,
+body.dark-mode .form-grid textarea {
+	background: #333333;
+	border-color: #444444;
+	color: white;
+}
+
+body.dark-mode details {
+	background: #003366;
+}
+
+body.dark-mode .modal {
+	background: #2a2a2a;
+	color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 300px;
+    }
+
+    .navbar {
+        padding-bottom: 330px;
+    }
+
+    .logo {
+        align-items: center;
+    }
+	.maindiv {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		height: auto;
+		padding: 10px;
+	}
+
+	.div1,
+	.div2 {
+		width: 100%;
+		height: auto;
+		margin: 10px 0;
+	}
+
+	.form-grid {
+		grid-template-columns: 1fr;
+		width: 90%;
+	}
+
+	#submit {
+		transform: none;
+		margin: 10px auto;
+	}
+}
+

@@ -1,8 +1,14 @@
 const darkModeToggle = document.getElementById('darkModeToggle');
-const bodyG = document.getElementById('gallery-body');
+const body = document.getElementById('gallery-body');
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
 
 darkModeToggle.addEventListener('click', () => {
-    bodyG.classList.toggle('dark-mode');
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
 });
 
 const galleryImages = document.querySelectorAll('.gallery img');

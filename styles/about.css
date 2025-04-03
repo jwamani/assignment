@@ -26,7 +26,7 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
-	text-align: left;
+	/* text-align: left; */
 	margin-bottom: 20px;
 }
 
@@ -58,7 +58,8 @@ p {
 }
 
 .tab-button.active {
-	background: #c62828;
+	background: #003366;
+	color: white;
 }
 
 .tab-content {
@@ -78,7 +79,11 @@ p {
 /* Media Queries */
 @media (max-width: 768px) {
 	body {
-		padding-top: 60px; /* Smaller padding for mobile */
+		padding-top: 300px; 
+	}
+
+	.navbar {
+		padding-bottom: 290px;
 	}
 
 	.tabs {

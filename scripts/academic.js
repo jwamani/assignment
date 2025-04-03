@@ -27,10 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    const academicBody = document.getElementById('academics-body');
+    const body = document.body;
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
 
     darkModeToggle.addEventListener('click', () => {
-        academicBody.classList.toggle('dark-mode')
-    })
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+    });
 });
 
